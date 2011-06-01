@@ -43,18 +43,23 @@ ParticleSystem ps_clouds;
 
 int frame;
 
-PImage[] icons = new PImage[4];
+PImage[] icons = new PImage[10];
 PImage[] clouds = new PImage[5];
-
 
 // Setup the Processing Canvas
 void setup(){
-    size( $('canvas').width(), 450);
+    size($('canvas').width(), 450);
     
     icons[0] = loadImage("android.png");
     icons[1] = loadImage("appengine.png");
-    icons[2] = loadImage("android.png");
-    icons[3] = loadImage("appengine.png");
+    icons[2] = loadImage("clojure.png");
+    icons[3] = loadImage("erlang.png");
+    icons[4] = loadImage("mongo.png");
+    icons[5] = loadImage("node.png");
+    icons[6] = loadImage("ruby.png");
+    icons[7] = loadImage("rails.png");
+    icons[8] = loadImage("python.png");
+    icons[9] = loadImage("sprout.png");
 
     clouds[0]= loadImage("cloud1.png");
     clouds[1]= loadImage("cloud2.png");
@@ -114,7 +119,7 @@ class Particle {
 	    the_vel = random(0, 2);
 	}
 	else {
-	    the_vel = random(2, 5);
+	    the_vel = random(1, 3);
 	}
 
 	vel = new Vector3D(the_vel, 0, 1);  
